@@ -8,6 +8,7 @@ The goal of this project is to, by leveraging, the segmentation and classificati
 1. First download the source code from this post: [pyimagesearch blogpost](https://www.pyimagesearch.com/2018/09/03/semantic-segmentation-with-opencv-and-deep-learning)
 
 2. Make sure that you have OpenCV 3.4.1 or higher version and have following necessary packages installed:
+
    a. numpy
    
    b. argparse
