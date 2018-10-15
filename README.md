@@ -21,7 +21,7 @@ The goal of this project is to, by leveraging, the segmentation and classificati
 
 3. After that replace the segment.py file given through the source code **with the segment.py of this repository**
 
-4. Follow getstreet.py or getstreet.ipynb file in this repository to download the Google Street View (GSV) images in the images folder. Get API Key for GSV images from [here](https://developers.google.com/maps/documentation/streetview/get-api-key)
+4. Follow get_street_images.ipynb file in this repository to download the Google Street View (GSV) images in the images folder. Get API Key for GSV images from [here](https://developers.google.com/maps/documentation/streetview/get-api-key)
 
 5. Once the GSV images are installed, change the image file path in segment.py
 
