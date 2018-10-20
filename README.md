@@ -24,8 +24,6 @@ The goal of this project is to implement a traffic flow counter/count distinct o
 
 4. segment_video.py - python file to run the segmentation algorithm on the train.mp4 file and count the number of distinct objects in each frame (here each video frame is a single image as the video itself is made of several images put together) of the video. The output of the segmentation is saved as "second_avenue_output_count.avi" in the output folder.
 
-  ![Legend](https://github.com/ishacusp/ARGO_Labs/blob/master/opencv-semantic-segmentation/legend_reference.jpg)
-
 5. To run the segmentation on an image file:
    python segment.py --model enet-cityscapes/enet-model.net \
 	--classes enet-cityscapes/enet-classes.txt \
@@ -38,6 +36,10 @@ The goal of this project is to implement a traffic flow counter/count distinct o
 	--colors enet-cityscapes/enet-colors.txt \
 	--video videos/train.mp4 \
 	--output output/second_avenue_output.avi
+	
+7. Legend:
+![Legend](https://github.com/ishacusp/ARGO_Labs/blob/master/opencv-semantic-segmentation/legend_reference.jpg)
 
 Reference: https://www.pyimagesearch.com/2018/09/03/semantic-segmentation-with-opencv-and-deep-learning
-Legend Reference: https://www.pyimagesearch.com/wp-content/uploads/2018/08/opencv_semantic_segmentation_result04.jpg
+
+
