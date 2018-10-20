@@ -8,24 +8,32 @@ import argparse
 import imutils
 import time
 import cv2
+import os
+
+path = "videos"
+if os.path.exists(path):
+    print("File exist")
+else:
+	print("False")
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-m", "--model", required=True,
-	help="path to deep learning segmentation model")
+	help="/User/ishachaturvedi/Isha/ARGO_Labs/opencv-semantic-segmentation/enet-cityscapes/enet-model.net")
 ap.add_argument("-c", "--classes", required=True,
-	help="path to .txt file containing class labels")
+	help="/User/ishachaturvedi/Isha/ARGO_Labs/opencv-semantic-segmentation/enet-cityscapes/enet-classes.txt")
 ap.add_argument("-v", "--video", required=True,
-	help="path to input video file")
+	help="/User/ishachaturvedi/Isha/ARGO_Labs/opencv-semantic-segmentation/videos/train.mp4")
 ap.add_argument("-o", "--output", required=True,
-	help="path to output video file")
+	help="/User/ishachaturvedi/Isha/ARGO_Labs/opencv-semantic-segmentation/output/second_avenue_output.avi")
 ap.add_argument("-s", "--show", type=int, default=1,
 	help="whether or not to display frame to screen")
 ap.add_argument("-l", "--colors", type=str,
-	help="path to .txt file containing colors for labels")
+	help="User/ishachaturvedi/Isha/ARGO_Labs/opencv-semantic-segmentation/enet-cityscapes/enet-colors.txt")
 ap.add_argument("-w", "--width", type=int, default=500,
 	help="desired width (in pixels) of input image")
 args = vars(ap.parse_args())
+
 
 # load the class label names
 CLASSES = open(args["classes"]).read().strip().split("\n")
@@ -49,7 +57,7 @@ else:
 
 # load our serialized model from disk
 print("[INFO] loading model...")
-net = cv2.dnn.readNet(args["model"])
+net = cv2.dnn.readNetFromTorch(args["model"])
 
 # initialize the video stream and pointer to output video file
 vs = cv2.VideoCapture(args["video"])
@@ -115,7 +123,7 @@ while True:
 	if writer is None:
 		# initialize our video writer
 		fourcc = cv2.VideoWriter_fourcc(*"MJPG")
-		writer = cv2.VideoWriter(args["output"], fourcc, 30,
+		writer = cv2.VideoWriter(args["output"], fourcc, 2,
 			(output.shape[1], output.shape[0]), True)
 
 		# some information on processing single frame
