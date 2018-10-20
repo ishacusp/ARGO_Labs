@@ -110,6 +110,9 @@ while True:
 	# corresponding color
 	mask = COLORS[classMap]
 
+	#counting number of distinct colors to get number of distinct objects
+	num_distinct_colors= len(set(tuple(v) for m2d in mask for v in m2d))
+    
 	# resize the mask such that its dimensions match the original size
 	# of the input frame
 	mask = cv2.resize(mask, (frame.shape[1], frame.shape[0]),
@@ -136,8 +139,11 @@ while True:
 	# write the output frame to disk
 	writer.write(output)
 
+	font = cv2.FONT_HERSHEY_SIMPLEX
+
 	# check to see if we should display the output frame to our screen
 	if args["show"] > 0:
+		cv2.putText(output, str(num_distinct_colors) ,(20,25), font, 1,(0,0,255),5,cv2.LINE_AA)
 		cv2.imshow("Frame", output)
 		key = cv2.waitKey(1) & 0xFF
  
