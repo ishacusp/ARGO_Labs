@@ -38,6 +38,7 @@ The goal of this project is to implement a traffic flow counter/count distinct o
 	--output output/second_avenue_output.avi
 	
 7. Legend:
+
 ![Legend](https://github.com/ishacusp/ARGO_Labs/blob/master/opencv-semantic-segmentation/legend_reference.jpg)
 
 Reference: https://www.pyimagesearch.com/2018/09/03/semantic-segmentation-with-opencv-and-deep-learning
