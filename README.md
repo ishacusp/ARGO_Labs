@@ -1,31 +1,40 @@
 # ARGO_Labs
-This is a repository for all my work at ARGO Labs 
+This is a repository for all my work at ARGO Labs (in construction)
 
-The goal of this project is to, by leveraging, the segmentation and classification approach as described in the [pyimagesearch blogpost](https://www.pyimagesearch.com/2018/09/03/semantic-segmentation-with-opencv-and-deep-learning), count the number of distinct objects along 2nd Avenue in Manhattan.
+The goal of this project is to implement a traffic flow counter/count distinct objects for the streets of New York City
+(2nd Avenue Street of NYC) using ENet Neural Network (pixel wise real-time semantic segmentation) and OpenCV. 
 
+2. Package Requisities:
 
-### To use this repository (instructions in construction)
-1. First download the source code from this post: [pyimagesearch blogpost](https://www.pyimagesearch.com/2018/09/03/semantic-segmentation-with-opencv-and-deep-learning)
-
-2. Make sure that you have OpenCV 3.4.1 or higher version and have following necessary packages installed:
-
-   a. numpy
+   a. OpenCV 3.4.1
+    
+   b. numpy
    
-   b. argparse
+   c. argparse
    
-   c. imutils
+   d. imutils
    
-   d. time
+   e. time
    
-   e. cv2
+   f. cv2
 
-3. After that replace the segment.py file given through the source code **with the segment.py of this repository**
+4. get_street_images.ipynb - jupyter notebook to download the Google Street View (GSV) images in the images folder and then turn those images to a video (MP4 file), which is saved in the videos folder(train.mp4). Get API Key for GSV images from [here](https://developers.google.com/maps/documentation/streetview/get-api-key)
 
-4. Follow get_street_images.ipynb file in this repository to download the Google Street View (GSV) images in the images folder. Get API Key for GSV images from [here](https://developers.google.com/maps/documentation/streetview/get-api-key)
+5. segment.py - python file to run the segmentation algorithm on image files
 
-5. Once the GSV images are installed, change the image file path in segment.py
+6. segment_video.py - python file to run the segmentation algorithm on the train.mp4 file. The output of the segmentation is saved as "second_avenue_output.avi" in the output folder.
 
-6. Then Run: python segment.py --model enet-cityscapes/enet-model.net \
+7. To run the segmentation on an image file:
+   python segment.py --model enet-cityscapes/enet-model.net \
 	--classes enet-cityscapes/enet-classes.txt \
 	--colors enet-cityscapes/enet-colors.txt \
 	--image images/image_name
+	
+8. To run the segmentation on the video file (mp4 in the videos folder):
+   python segment_video.py --model enet-cityscapes/enet-model.net \
+	--classes enet-cityscapes/enet-classes.txt \
+	--colors enet-cityscapes/enet-colors.txt \
+	--video videos/train.mp4 \
+	--output output/second_avenue_output.avi
+
+Reference: https://www.pyimagesearch.com/2018/09/03/semantic-segmentation-with-opencv-and-deep-learning
