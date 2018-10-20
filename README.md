@@ -4,7 +4,7 @@ This is a repository for all my work at ARGO Labs (in construction)
 The goal of this project is to implement a traffic flow counter/count distinct objects for the streets of New York City
 (2nd Avenue Street of NYC) using ENet Neural Network (pixel wise real-time semantic segmentation) and OpenCV. 
 
-2. Package Requisities:
+1. Package Requisities:
 
    a. OpenCV 3.4.1
     
@@ -18,19 +18,19 @@ The goal of this project is to implement a traffic flow counter/count distinct o
    
    f. cv2
 
-4. get_street_images.ipynb - jupyter notebook to download the Google Street View (GSV) images in the images folder and then turn those images to a video (MP4 file), which is saved in the videos folder(train.mp4). Get API Key for GSV images from [here](https://developers.google.com/maps/documentation/streetview/get-api-key)
+2. get_street_images.ipynb - jupyter notebook to download the Google Street View (GSV) images in the images folder and then turn those images to a video (MP4 file), which is saved in the videos folder(train.mp4). Get API Key for GSV images from [here](https://developers.google.com/maps/documentation/streetview/get-api-key)
 
-5. segment.py - python file to run the segmentation algorithm on image files
+3. segment.py - python file to run the segmentation algorithm on image files
 
-6. segment_video.py - python file to run the segmentation algorithm on the train.mp4 file. The output of the segmentation is saved as "second_avenue_output.avi" in the output folder.
+4. segment_video.py - python file to run the segmentation algorithm on the train.mp4 file. The output of the segmentation is saved as "second_avenue_output.avi" in the output folder.
 
-7. To run the segmentation on an image file:
+5. To run the segmentation on an image file:
    python segment.py --model enet-cityscapes/enet-model.net \
 	--classes enet-cityscapes/enet-classes.txt \
 	--colors enet-cityscapes/enet-colors.txt \
 	--image images/image_name
 	
-8. To run the segmentation on the video file (mp4 in the videos folder):
+6. To run the segmentation on the video file (mp4 in the videos folder):
    python segment_video.py --model enet-cityscapes/enet-model.net \
 	--classes enet-cityscapes/enet-classes.txt \
 	--colors enet-cityscapes/enet-colors.txt \
