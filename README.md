@@ -38,3 +38,4 @@ The goal of this project is to implement a traffic flow counter/count distinct o
 	--output output/second_avenue_output.avi
 
 Reference: https://www.pyimagesearch.com/2018/09/03/semantic-segmentation-with-opencv-and-deep-learning
+Legend Reference: https://www.pyimagesearch.com/wp-content/uploads/2018/08/opencv_semantic_segmentation_result04.jpg
