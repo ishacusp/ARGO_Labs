@@ -32,6 +32,9 @@ The goal of this project is to implement a traffic flow counter/count distinct o
 A small clip of the output video	
 </p>
 
+Legend:
+
+![Legend](https://github.com/ishacusp/ARGO_Labs/blob/master/opencv-semantic-segmentation/legend_reference.jpg)
 
 5. To run the segmentation on an image file:
    python segment.py --model enet-cityscapes/enet-model.net \
@@ -46,10 +49,6 @@ A small clip of the output video
 	--video videos/train.mp4 \
 	--output output/second_avenue_output.avi
 	
-7. Legend:
-
-![Legend](https://github.com/ishacusp/ARGO_Labs/blob/master/opencv-semantic-segmentation/legend_reference.jpg)
-
 Reference: https://www.pyimagesearch.com/2018/09/03/semantic-segmentation-with-opencv-and-deep-learning
 
 
