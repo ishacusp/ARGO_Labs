@@ -2,7 +2,7 @@
 This is a repository for all my work at ARGO Labs (in construction)
 
 The goal of this project is to implement a traffic flow counter/count distinct objects for the streets of New York City
-(2nd Avenue Street of NYC) using ENet Neural Network (pixel wise real-time semantic segmentation) and OpenCV. 
+(2nd Avenue Street of NYC) using ENet Neural Network (pixel wise semantic segmentation) and OpenCV. 
 
 1. Package Requisities:
 
