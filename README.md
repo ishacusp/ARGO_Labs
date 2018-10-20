@@ -24,7 +24,7 @@ The goal of this project is to implement a traffic flow counter/count distinct o
 
 4. segment_video.py - python file to run the segmentation algorithm on the train.mp4 file and count the number of distinct objects in each frame (here each video frame is a single image as the video itself is made of several images put together) of the video. The output of the segmentation is saved as "second_avenue_output_count.avi" in the output folder.
 
-![clip](https://github.com/ishacusp/ARGO_Labs/blob/master/opencv-semantic-segmentation/output/output_count.gif)![Legend](https://github.com/ishacusp/ARGO_Labs/blob/master/opencv-semantic-segmentation/legend.jpg)
+![clip](https://github.com/ishacusp/ARGO_Labs/blob/master/opencv-semantic-segmentation/output/output_count.gif)![Legend](https://github.com/ishacusp/ARGO_Labs/blob/master/opencv-semantic-segmentation/legend_.jpg)
 
 <p align="center">
 A small clip of the output video	
