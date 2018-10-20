@@ -122,10 +122,16 @@ while True:
 	# to form an output visualization
 	output = ((0.3 * frame) + (0.7 * mask)).astype("uint8")
 
-	# check if the video writer is None
+	font = cv2.FONT_HERSHEY_SIMPLEX
+	
+    #display the count of distinct objects in each frame
+	cv2.putText(output, str(num_distinct_colors) ,(30,40), font, 1,(0,0,255),5,cv2.LINE_AA)
+
+    # check if the video writer is None
 	if writer is None:
 		# initialize our video writer
 		fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+		
 		writer = cv2.VideoWriter(args["output"], fourcc, 2,
 			(output.shape[1], output.shape[0]), True)
 
@@ -139,11 +145,10 @@ while True:
 	# write the output frame to disk
 	writer.write(output)
 
-	font = cv2.FONT_HERSHEY_SIMPLEX
 
 	# check to see if we should display the output frame to our screen
 	if args["show"] > 0:
-		cv2.putText(output, str(num_distinct_colors) ,(20,25), font, 1,(0,0,255),5,cv2.LINE_AA)
+		# cv2.putText(output, str(num_distinct_colors) ,(20,25), font, 1,(0,0,255),5,cv2.LINE_AA)
 		cv2.imshow("Frame", output)
 		key = cv2.waitKey(1) & 0xFF
  
