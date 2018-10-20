@@ -27,7 +27,8 @@ The goal of this project is to implement a traffic flow counter/count distinct o
 <p align="center">
 <img src="https://github.com/ishacusp/ARGO_Labs/blob/master/opencv-semantic-segmentation/output/output_count.gif"
 
-A short clip of the output video />
+
+A short clip of the output video 
 </p>
 
 
