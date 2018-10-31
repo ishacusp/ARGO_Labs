@@ -38,7 +38,7 @@ A small clip of the output video
 	--image images/image_name
 	
 6. To run the segmentation on the video file (mp4 in the videos folder):
-   python segment_video.py --model enet-cityscapes/enet-model.net \
+   python segment_video.py --model enet-cityscapes/enet-model.net \\
 	--classes enet-cityscapes/enet-classes.txt \
 	--colors enet-cityscapes/enet-colors.txt \
 	--video videos/train.mp4 \
